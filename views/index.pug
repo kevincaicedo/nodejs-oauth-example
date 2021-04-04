@@ -1,0 +1,18 @@
+html
+	head
+		title Welcome
+	body
+		h1 Welcome #{user.displayName}
+		img(src="user.avatarUrl", alt="User Avatar", srcset="user.avatarUrl")
+		div 
+			ul 
+				each repo in repos
+					div 
+						li name: #{repo.name} 
+						li visibility: #{repo.visibility}
+						li ssh url to repo: #{repo.ssh_url_to_repo} 
+						li http url to repo: #{repo.http_url_to_repo}
+						li description: #{repo.description} 
+						li default branch: #{repo.default_branch} 
+						li created at: #{repo.created_at}
+					br
